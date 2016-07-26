@@ -2,7 +2,7 @@
   "name": "trivia",
   "version": "1.0.0",
   "description": "Trivia Game",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server",
     "production": "webpack -p",

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "production": "webpack -p",
-    "deploy": "webpack-dev-server"
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
     "babel-core": "6.11.4",
     "babel-loader": "6.2.4",
     "babel-preset-react": "6.11.1",
+    "gh-pages": "0.11.0",
+    "gh-pages-deploy": "0.4.2",
     "html-webpack-plugin": "2.22.0",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1"

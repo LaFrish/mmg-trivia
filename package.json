@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LaFrish/mmg-trivia.git"
+    "url": "git+https://github.com/LaFrish/office-olympics-trivia.git"
   },
   "author": "Farishta Haider",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LaFrish/mmg-trivia/issues"
+    "url": "https://github.com/LaFrish/office-olympics-trivia/issues"
   },
-  "homepage": "https://github.com/LaFrish/mmg-trivia#readme",
+  "homepage": "https://github.com/LaFrish/office-olympics-trivia#readme",
   "dependencies": {
     "babel": "6.5.2",
     "babel-core": "6.11.4",

@@ -31,7 +31,6 @@ const Like =() => <span className="fa fa-thumbs-o-up"></span>
 
 let ButtonMixed = Mixin(Button)
 
-
 class App extends React.Component {
   render(){
     return (

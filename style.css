@@ -1,4 +1,18 @@
 body{
   margin: 50px;
-  color: blue;
+  color: #3b5998;
+  text-align: center;
+}
+
+
+button{
+  width: auto;
+  color: #3b5998;
+  font-size: 24px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+h1{
+  font-size: 30px;
 }

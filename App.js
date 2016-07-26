@@ -1,47 +1,47 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-class App extends React.Component {
+let Mixin = InnerComponent => class extends React.Component{
   constructor(){
     super();
-    this.state = { val: 0 };
     this.update = this.update.bind(this)
+    this.state = {val: 0}
     }
   update(){
-    this.setState({val: this.state.val + 1 })
+    this.setState({val: this.state.val +1})
   }
   componentWillMount(){
-    console.log('mounting')
+    console.log('will mount')
   }
   render(){
-    console.log('rendering!')
-    return <button onClick={this.update}>{this.state.val}</button>
+    return<InnerComponent
+    update={this.update}
+    {...this.state}
+    {...this.props} />
   }
   componentDidMount(){
     console.log('mounted')
   }
-  componentWillUnMount(){
-    console.log('bye!')
+}
+
+const Button = (props) => <button
+                            onClick={props.update}>
+                            <Like/> {props.txt} - {props.val}
+                          </button>
+
+const Like =() => <span className="fa fa-thumbs-o-up"></span>
+
+let ButtonMixed = Mixin(Button)
+
+
+class App extends React.Component {
+  render(){
+    return (
+
+      <div>
+        <h1>Office Olympics Trivia-palooza! </h1>
+        <ButtonMixed txt="Office Olympics" />
+      </div>
+    );
   }
 }
 
-class Wrapper extends React.Component {
-  constructor(){
-    super();
-  }
-  mount(){
-    ReactDOM.render(<App />, document.getElementById('a'))
-  }
-  unmount(){
-    ReactDOM.unmountComponentAtNode(document.getElementById('a'))
-  }
-  render(){
-    return (
-      <div>
-      <button onClick={this.mount.bind(this)}>Mount</button>
-      <button onClick={this.unmount.bind(this)}>Unmount</button>
-      <div id="a"></div>
-      </div>
-    )
-  }
-}
-export default Wrapper
+export default App
